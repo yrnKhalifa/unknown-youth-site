@@ -1,5 +1,4 @@
-# unknown-youth-site
-UNKNOWN YOUTH
+UNLISTED YOUTH
 A simple multi-section website for UNKNOWN YOUTH, a Ghanaian streetwear brand — built as a WEBBO3 mini project.
 About
 The site introduces the brand, shows a piece from the current drop, and links out to the brand's social page. It's built with plain HTML and CSS — no frameworks, no build tools.
