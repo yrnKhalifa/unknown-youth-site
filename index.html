@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; form-action 'self' mailto:; base-uri 'none'; object-src 'none'; frame-src 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>UNLISTED YOUTH STREETWEAR — Made in Ghana 🇬🇭</title>
 <meta name="description" content="UNLISTED YOUTH STREETWEAR: tees, armless tops, baggy jeans, jackets and socks. Off the list.">
@@ -229,16 +231,19 @@ footer .small{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 
 
 
 /* welcome: a sheet of paper that tears into pieces after 2 seconds */
-.welcome{position:fixed;inset:0;z-index:100;touch-action:none;animation:wFallback .5s ease-in 6s forwards}
+.welcome{position:fixed;inset:0;z-index:100;touch-action:none;animation:wFallback .5s ease-in 5s forwards}
 .sheet{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;padding:24px;color:var(--ink);background-color:#f0e9da;background-image:repeating-linear-gradient(0deg,rgba(0,0,0,.03) 0 1px,transparent 1px 4px),repeating-linear-gradient(90deg,rgba(120,90,40,.035) 0 1px,transparent 1px 5px),radial-gradient(circle at 25% 20%,rgba(255,255,255,.65),transparent 55%),radial-gradient(circle at 80% 85%,rgba(120,90,40,.2),transparent 60%)}
 .piece{position:absolute;inset:0;filter:drop-shadow(0 2px 3px rgba(0,0,0,.4));transition:transform 1s cubic-bezier(.5,0,.9,.4),opacity .25s linear .8s;will-change:transform}
 .cut{position:absolute;inset:0}
 .welcome.rip{animation:wRip .3s linear}
 .welcome.fade{transition:opacity .4s;opacity:0}
-.w-logo{width:min(170px,42vw);height:auto;display:block;filter:brightness(0)}
-.w-small{font-size:15px;letter-spacing:.3em;text-transform:uppercase;color:#6b6254;margin-top:8px}
-.w-title{font-family:var(--display);font-weight:900;text-transform:uppercase;line-height:.95;font-size:clamp(40px,12vw,100px)}
-.w-tag{font-size:18px;color:var(--red);font-weight:600}
+.sheet{padding:10px;gap:0}
+.w-svg{display:block;width:min(100%,calc((100vh - 20px)*.877));height:auto}
+@supports (height:100dvh){.w-svg{width:min(100%,calc((100dvh - 20px)*.877))}}
+.w-svg .hl,.w-svg .hr{overflow:hidden}
+.w-ln{font-family:var(--display);font-weight:900}
+.w-lab{font-family:var(--body);font-size:13px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;fill:#6b6254}
+.w-tag{font-family:var(--body);font-size:23px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;fill:var(--red)}
 @keyframes wRip{0%,100%{transform:none}20%{transform:translate(-5px,2px) rotate(-.4deg)}40%{transform:translate(5px,-2px) rotate(.4deg)}60%{transform:translate(-4px,1px)}80%{transform:translate(4px,-1px)}}
 @keyframes wFallback{to{opacity:0;visibility:hidden}}
 
@@ -255,10 +260,50 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 
 <div class="welcome" id="welcome" role="status" aria-label="Welcome to UNLISTED YOUTH STREETWEAR">
   <div class="sheet">
-    <img class="w-logo" alt="">
-    <p class="w-small">Welcome to</p>
-    <p class="w-title">UNLISTED YOUTH STREETWEAR</p>
-    <p class="w-tag">Off the list.</p>
+  <svg class="w-svg" viewBox="0 0 400 456" role="img" aria-label="Two characters write UNLISTED YOUTH STREETWEAR">
+    <text class="w-lab" x="200" y="20" text-anchor="middle">Welcome to</text>
+    <text class="w-tag" x="200" y="442" text-anchor="middle" opacity="0">Off the list.</text>
+    <svg class="hl" data-i="0" x="20" y="32" width="0" height="128" viewBox="20 32 0.01 128"><text class="w-ln" x="20" y="142" font-size="136" textLength="360" lengthAdjust="spacingAndGlyphs" fill="#1a1a1a">UNLISTED</text></svg>
+    <svg class="hr" data-i="0" x="20" y="32" width="0" height="128" viewBox="20 32 0.01 128"><text class="w-ln" x="20" y="142" font-size="136" textLength="360" lengthAdjust="spacingAndGlyphs" fill="#1a1a1a">UNLISTED</text></svg>
+    <svg class="hl" data-i="1" x="84" y="166" width="0" height="128" viewBox="84 166 0.01 128"><text class="w-ln" x="84" y="272" font-size="134" textLength="232" lengthAdjust="spacingAndGlyphs" fill="#d1382c">YOUTH</text></svg>
+    <svg class="hr" data-i="1" x="84" y="166" width="0" height="128" viewBox="84 166 0.01 128"><text class="w-ln" x="84" y="272" font-size="134" textLength="232" lengthAdjust="spacingAndGlyphs" fill="#d1382c">YOUTH</text></svg>
+    <svg class="hl" data-i="2" x="20" y="300" width="0" height="108" viewBox="20 300 0.01 108"><text class="w-ln" x="20" y="390" font-size="112" textLength="360" lengthAdjust="spacingAndGlyphs" fill="#1a1a1a">STREETWEAR</text></svg>
+    <svg class="hr" data-i="2" x="20" y="300" width="0" height="108" viewBox="20 300 0.01 108"><text class="w-ln" x="20" y="390" font-size="112" textLength="360" lengthAdjust="spacingAndGlyphs" fill="#1a1a1a">STREETWEAR</text></svg>
+    <g class="ch" data-s="0">
+      <g class="fa"><path class="fsl" fill="none" stroke="#1a1a1a" stroke-width="14" stroke-linecap="round"/><path class="fko" fill="none" stroke="#8a5738" stroke-width="10" stroke-linecap="round"/><circle class="fho" r="7.5" fill="#8a5738"/></g>
+      <g class="bd" transform="translate(42 218)">
+        <rect x="-6" y="16" width="12" height="12" fill="#8a5738"/>
+        <path d="M-30 60Q-30 28 -12 25L12 25Q30 28 30 60Q30 67 23 67L-23 67Q-30 67 -30 60Z" fill="#1a1a1a"/>
+        <path d="M-5 31v14M5 31v12" stroke="#e3a72f" stroke-width="2.2" stroke-linecap="round"/>
+        <text class="w-ln" y="59" font-size="11" text-anchor="middle" fill="#e3a72f">UY</text>
+        <circle cx="-24" cy="4" r="5" fill="#8a5738"/><circle cx="24" cy="4" r="5" fill="#8a5738"/>
+        <circle r="24" fill="#8a5738"/>
+        <ellipse class="ey" cx="-9" cy="5" rx="5.2" ry="6" fill="#fff"/><ellipse class="ey" cx="9" cy="5" rx="5.2" ry="6" fill="#fff"/>
+        <g class="pu"><circle cx="-9" cy="5" r="2.7" fill="#1a1a1a"/><circle cx="9" cy="5" r="2.7" fill="#1a1a1a"/></g>
+        <path class="mo" d="M-6 15Q0 19.5 6 15" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+        <path d="M-25 -5C-25 -34 25 -34 25 -5Z" fill="#d1382c"/>
+        <rect x="-26.5" y="-12" width="53" height="8" rx="4" fill="#1a1a1a"/>
+      </g>
+      <g class="wa"><path class="ws" fill="none" stroke="#1a1a1a" stroke-width="14" stroke-linecap="round"/><path class="wk" fill="none" stroke="#8a5738" stroke-width="10" stroke-linecap="round"/><line class="pb" stroke="#e3a72f" stroke-width="8" stroke-linecap="round"/><line class="pn" stroke="#1a1a1a" stroke-width="4.5" stroke-linecap="round"/><circle class="wh" r="8" fill="#8a5738"/></g>
+    </g>
+    <g class="ch" data-s="1">
+      <g class="fa"><path class="fsl" fill="none" stroke="#d1382c" stroke-width="14" stroke-linecap="round"/><path class="fko" fill="none" stroke="#a8704a" stroke-width="10" stroke-linecap="round"/><circle class="fho" r="7.5" fill="#a8704a"/></g>
+      <g class="bd" transform="translate(358 218)">
+        <rect x="-6" y="16" width="12" height="12" fill="#a8704a"/>
+        <path d="M-30 60Q-30 28 -12 25L12 25Q30 28 30 60Q30 67 23 67L-23 67Q-30 67 -30 60Z" fill="#d1382c"/>
+        <path d="M-5 31v14M5 31v12" stroke="#efede8" stroke-width="2.2" stroke-linecap="round"/>
+        <text class="w-ln" y="59" font-size="11" text-anchor="middle" fill="#efede8">UY</text>
+        <circle cx="-24" cy="4" r="5" fill="#a8704a"/><circle cx="24" cy="4" r="5" fill="#a8704a"/>
+        <circle r="24" fill="#a8704a"/>
+        <ellipse class="ey" cx="-9" cy="5" rx="5.2" ry="6" fill="#fff"/><ellipse class="ey" cx="9" cy="5" rx="5.2" ry="6" fill="#fff"/>
+        <g class="pu"><circle cx="-9" cy="5" r="2.7" fill="#1a1a1a"/><circle cx="9" cy="5" r="2.7" fill="#1a1a1a"/></g>
+        <path class="mo" d="M-6 15Q0 19.5 6 15" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+        <path d="M-25 -5C-25 -34 25 -34 25 -5Z" fill="#e3a72f"/>
+        <rect x="-26.5" y="-12" width="53" height="8" rx="4" fill="#1a1a1a"/>
+      </g>
+      <g class="wa"><path class="ws" fill="none" stroke="#d1382c" stroke-width="14" stroke-linecap="round"/><path class="wk" fill="none" stroke="#a8704a" stroke-width="10" stroke-linecap="round"/><line class="pb" stroke="#1a1a1a" stroke-width="8" stroke-linecap="round"/><line class="pn" stroke="#d1382c" stroke-width="4.5" stroke-linecap="round"/><circle class="wh" r="8" fill="#a8704a"/></g>
+    </g>
+  </svg>
   </div>
 </div>
 
@@ -271,7 +316,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
       <a class="hide-s" href="#sizes">Sizes</a>
       <a class="hide-s" href="#contact">Contact</a>
       <button class="bag-btn" id="openBag">Bag (<span id="count">0</span>)</button>
-      <a class="wa" href="https://wa.me/233540441560?text=Hi%20UNLISTED%20YOUTH%20STREETWEAR%2C%20I%20have%20a%20question." target="_blank" rel="noopener" aria-label="Chat with UNLISTED YOUTH STREETWEAR on WhatsApp"><svg viewBox="0 0 32 32" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M16.04 3C8.84 3 3 8.8 3 15.94c0 2.28.6 4.5 1.74 6.46L3 29l6.8-1.78a13.1 13.1 0 0 0 6.24 1.58C23.2 28.8 29 23 29 15.94 29 8.8 23.2 3 16.04 3zm0 23.6c-1.96 0-3.88-.52-5.56-1.5l-.4-.24-4.04 1.06 1.08-3.94-.26-.4a10.5 10.5 0 0 1-1.62-5.58c0-5.8 4.76-10.52 10.6-10.52S26.6 10.2 26.6 15.94c0 5.8-4.76 10.66-10.56 10.66zm5.8-7.88c-.32-.16-1.88-.92-2.16-1.02-.3-.1-.5-.16-.7.16-.2.32-.8 1.02-1 1.24-.18.2-.36.24-.68.08-.32-.16-1.34-.5-2.54-1.56-.94-.84-1.58-1.88-1.76-2.2-.18-.32-.02-.5.14-.66.14-.14.32-.36.48-.54.16-.18.2-.32.32-.52.1-.2.04-.4-.04-.56-.08-.16-.7-1.7-.98-2.32-.26-.6-.52-.52-.7-.54h-.6c-.2 0-.54.08-.82.4-.28.32-1.08 1.06-1.08 2.58s1.1 3 1.26 3.2c.16.2 2.18 3.3 5.26 4.62.74.32 1.3.5 1.76.64.74.24 1.4.2 1.94.12.6-.1 1.88-.76 2.14-1.5.26-.74.26-1.38.18-1.5-.06-.14-.28-.22-.6-.38z"/></svg><span>Chat</span></a>
+      <a class="wa" href="https://wa.me/233540441560?text=Hi%20UNLISTED%20YOUTH%20STREETWEAR%2C%20I%20have%20a%20question." target="_blank" rel="noopener noreferrer" aria-label="Chat with UNLISTED YOUTH STREETWEAR on WhatsApp"><svg viewBox="0 0 32 32" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M16.04 3C8.84 3 3 8.8 3 15.94c0 2.28.6 4.5 1.74 6.46L3 29l6.8-1.78a13.1 13.1 0 0 0 6.24 1.58C23.2 28.8 29 23 29 15.94 29 8.8 23.2 3 16.04 3zm0 23.6c-1.96 0-3.88-.52-5.56-1.5l-.4-.24-4.04 1.06 1.08-3.94-.26-.4a10.5 10.5 0 0 1-1.62-5.58c0-5.8 4.76-10.52 10.6-10.52S26.6 10.2 26.6 15.94c0 5.8-4.76 10.66-10.56 10.66zm5.8-7.88c-.32-.16-1.88-.92-2.16-1.02-.3-.1-.5-.16-.7.16-.2.32-.8 1.02-1 1.24-.18.2-.36.24-.68.08-.32-.16-1.34-.5-2.54-1.56-.94-.84-1.58-1.88-1.76-2.2-.18-.32-.02-.5.14-.66.14-.14.32-.36.48-.54.16-.18.2-.32.32-.52.1-.2.04-.4-.04-.56-.08-.16-.7-1.7-.98-2.32-.26-.6-.52-.52-.7-.54h-.6c-.2 0-.54.08-.82.4-.28.32-1.08 1.06-1.08 2.58s1.1 3 1.26 3.2c.16.2 2.18 3.3 5.26 4.62.74.32 1.3.5 1.76.64.74.24 1.4.2 1.94.12.6-.1 1.88-.76 2.14-1.5.26-.74.26-1.38.18-1.5-.06-.14-.28-.22-.6-.38z"/></svg><span>Chat</span></a>
     </nav>
   </div>
 </header>
@@ -407,8 +452,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
           <p>Leave your email and we’ll message you before new pieces go live.</p>
           <form id="news" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="newsletter">
-            <p hidden><label>Leave this empty: <input name="bot-field"></label></p>
-            <input type="email" name="email" required placeholder="you@email.com" aria-label="Email address">
+            <p hidden><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+            <input type="email" name="email" required maxlength="254" autocomplete="email" inputmode="email" placeholder="you@email.com" aria-label="Email address">
             <button type="submit">Join the list</button>
           </form>
           <p id="newsMsg" role="status" style="margin-top:10px"></p>
@@ -416,8 +461,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
         <div>
           <h2>Order &amp; contact</h2>
           <p>Orders are confirmed on WhatsApp. Pay by Mobile Money on delivery or in advance.</p>
-          <p style="margin-top:10px">WhatsApp: <a href="https://wa.me/233540441560" target="_blank" rel="noopener">+233 54 044 1560</a></p>
-          <p>X: <a href="https://x.com/unknownyouth26" target="_blank" rel="noopener">@unknownyouth26</a></p>
+          <p style="margin-top:10px">WhatsApp: <a href="https://wa.me/233540441560" target="_blank" rel="noopener noreferrer">+233 54 044 1560</a></p>
+          <p>X: <a href="https://x.com/unknownyouth26" target="_blank" rel="noopener noreferrer">@unknownyouth26</a></p>
         </div>
       </div>
     </div>
@@ -431,7 +476,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   <div class="mega" aria-hidden="true">&nbsp;Unlisted</div>
 </footer>
 
-<a class="float-wa" href="https://wa.me/233540441560?text=Hi%20UNLISTED%20YOUTH%20STREETWEAR%2C%20I%20have%20a%20question." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32" width="30" height="30" fill="currentColor" aria-hidden="true"><path d="M16.04 3C8.84 3 3 8.8 3 15.94c0 2.28.6 4.5 1.74 6.46L3 29l6.8-1.78a13.1 13.1 0 0 0 6.24 1.58C23.2 28.8 29 23 29 15.94 29 8.8 23.2 3 16.04 3zm0 23.6c-1.96 0-3.88-.52-5.56-1.5l-.4-.24-4.04 1.06 1.08-3.94-.26-.4a10.5 10.5 0 0 1-1.62-5.58c0-5.8 4.76-10.52 10.6-10.52S26.6 10.2 26.6 15.94c0 5.8-4.76 10.66-10.56 10.66zm5.8-7.88c-.32-.16-1.88-.92-2.16-1.02-.3-.1-.5-.16-.7.16-.2.32-.8 1.02-1 1.24-.18.2-.36.24-.68.08-.32-.16-1.34-.5-2.54-1.56-.94-.84-1.58-1.88-1.76-2.2-.18-.32-.02-.5.14-.66.14-.14.32-.36.48-.54.16-.18.2-.32.32-.52.1-.2.04-.4-.04-.56-.08-.16-.7-1.7-.98-2.32-.26-.6-.52-.52-.7-.54h-.6c-.2 0-.54.08-.82.4-.28.32-1.08 1.06-1.08 2.58s1.1 3 1.26 3.2c.16.2 2.18 3.3 5.26 4.62.74.32 1.3.5 1.76.64.74.24 1.4.2 1.94.12.6-.1 1.88-.76 2.14-1.5.26-.74.26-1.38.18-1.5-.06-.14-.28-.22-.6-.38z"/></svg></a>
+<a class="float-wa" href="https://wa.me/233540441560?text=Hi%20UNLISTED%20YOUTH%20STREETWEAR%2C%20I%20have%20a%20question." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32" width="30" height="30" fill="currentColor" aria-hidden="true"><path d="M16.04 3C8.84 3 3 8.8 3 15.94c0 2.28.6 4.5 1.74 6.46L3 29l6.8-1.78a13.1 13.1 0 0 0 6.24 1.58C23.2 28.8 29 23 29 15.94 29 8.8 23.2 3 16.04 3zm0 23.6c-1.96 0-3.88-.52-5.56-1.5l-.4-.24-4.04 1.06 1.08-3.94-.26-.4a10.5 10.5 0 0 1-1.62-5.58c0-5.8 4.76-10.52 10.6-10.52S26.6 10.2 26.6 15.94c0 5.8-4.76 10.66-10.56 10.66zm5.8-7.88c-.32-.16-1.88-.92-2.16-1.02-.3-.1-.5-.16-.7.16-.2.32-.8 1.02-1 1.24-.18.2-.36.24-.68.08-.32-.16-1.34-.5-2.54-1.56-.94-.84-1.58-1.88-1.76-2.2-.18-.32-.02-.5.14-.66.14-.14.32-.36.48-.54.16-.18.2-.32.32-.52.1-.2.04-.4-.04-.56-.08-.16-.7-1.7-.98-2.32-.26-.6-.52-.52-.7-.54h-.6c-.2 0-.54.08-.82.4-.28.32-1.08 1.06-1.08 2.58s1.1 3 1.26 3.2c.16.2 2.18 3.3 5.26 4.62.74.32 1.3.5 1.76.64.74.24 1.4.2 1.94.12.6-.1 1.88-.76 2.14-1.5.26-.74.26-1.38.18-1.5-.06-.14-.28-.22-.6-.38z"/></svg></a>
 
 <div class="consent" id="consent" role="region" aria-label="Privacy and cookie policy" aria-live="polite">
   <div>
@@ -471,7 +516,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   <div class="foot">
     <div class="saving" id="saving" hidden></div>
     <div class="total"><span>Total</span><span id="total">GH₵ 0</span></div>
-    <a class="btn" id="checkout" href="#" target="_blank" rel="noopener">Order on WhatsApp</a>
+    <a class="btn" id="checkout" href="#" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
   </div>
 </aside>
 
@@ -507,9 +552,29 @@ const PRODUCTS = [
 const LABELS = {all:"All", tee:"Tees", armless:"Armless", jeans:"Jeans", jacket:"Jackets", socks:"Socks"};
 const SIZES = {tee:["S","M","L","XL"],armless:["S","M","L","XL"],jeans:["30","32","34","36"],jacket:["S","M","L","XL"],socks:["One size"]};
 
+// ===== Security helpers =====
+const MAX_QTY=10;
+// escape anything that goes into innerHTML
+const esc=v=>String(v).replace(/[&<>"'`]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;","`":"&#96;"}[c]));
+// rebuild the bag from storage: unknown products, colours or sizes are dropped, quantities are clamped
+function cleanBag(raw){
+  if(!Array.isArray(raw))return [];
+  const out=[];
+  for(const r of raw.slice(0,50)){
+    if(!r||typeof r!=="object")continue;
+    const p=PRODUCTS.find(x=>x.id===r.id); if(!p||p.limited===0)continue;
+    if(!Number.isInteger(r.ci)||r.ci<0||r.ci>=p.colors.length)continue;
+    if(typeof r.size!=="string"||!SIZES[p.type].includes(r.size))continue;
+    const qty=Math.min(MAX_QTY,Math.max(1,parseInt(r.qty,10)||1));
+    const key=p.id+"|"+r.ci+"|"+r.size, hit=out.find(i=>i.key===key);
+    if(hit)hit.qty=Math.min(MAX_QTY,hit.qty+qty); else out.push({key,id:p.id,ci:r.ci,size:r.size,qty});
+  }
+  return out;
+}
+
 // ===== State =====
 let filter="all", bag=[];
-try{bag=JSON.parse(localStorage.getItem("uyBag")||"[]")}catch(e){bag=[]}
+try{const raw=localStorage.getItem("uyBag")||"[]"; bag=raw.length>20000?[]:cleanBag(JSON.parse(raw))}catch(e){bag=[]}
 const picked={}; // product id -> color index
 const $=id=>document.getElementById(id);
 const money=n=>`${CURRENCY} ${n.toLocaleString()}`;
@@ -547,15 +612,16 @@ $("filters").addEventListener("click",e=>{
 });
 $("grid").addEventListener("click",e=>{
   const card=e.target.closest(".card"); if(!card)return;
-  const p=PRODUCTS.find(x=>x.id===card.dataset.id);
+  const p=PRODUCTS.find(x=>x.id===card.dataset.id); if(!p)return;
   const sw=e.target.closest(".sw");
   if(sw){picked[p.id]=+sw.dataset.c; const size=card.querySelector("select").value; renderGrid();
     const again=document.querySelector(`.card[data-id="${p.id}"] select`); if(again)again.value=size; return;}
   if(e.target.classList.contains("add")){
     const ci=picked[p.id]||0, size=card.querySelector("select").value;
+    if(p.limited===0||!p.colors[ci]||!SIZES[p.type].includes(size))return;
     const key=`${p.id}|${ci}|${size}`;
     const hit=bag.find(i=>i.key===key);
-    hit?hit.qty++:bag.push({key,id:p.id,ci,size,qty:1});
+    if(hit)hit.qty=Math.min(MAX_QTY,hit.qty+1); else bag.push({key,id:p.id,ci,size,qty:1});
     renderBag(); openBag();
   }
 });
@@ -567,8 +633,8 @@ function renderBag(){
   if(!bag.length){$("items").innerHTML='<p class="empty">Your bag is empty. Pick something from the drop.</p>';}
   else $("items").innerHTML=bag.map(i=>{
     const p=PRODUCTS.find(x=>x.id===i.id);
-    return `<div class="item" data-key="${i.key}"><div><strong>${p.name}</strong>
-      <small>${p.colors[i.ci].n} · ${i.size}</small>
+    return `<div class="item" data-key="${esc(i.key)}"><div><strong>${esc(p.name)}</strong>
+      <small>${esc(p.colors[i.ci].n)} · ${esc(i.size)}</small>
       <div class="qty"><button data-a="-" aria-label="Remove one">−</button>${i.qty}<button data-a="+" aria-label="Add one">+</button></div></div>
       <div>${money(p.price*i.qty)}</div></div>`;
   }).join("");
@@ -578,13 +644,14 @@ function renderBag(){
   $("saving").hidden=!saving;
   $("saving").innerHTML=saving?`<span>Bundle saving</span><span>− ${money(saving)}</span>`:"";
   $("total").textContent=money(total);
-  const lines=bag.map(i=>{const p=PRODUCTS.find(x=>x.id===i.id);return `${i.qty} x ${p.name} (${p.colors[i.ci].n}, ${i.size})`}).join("%0A");
-  $("checkout").href=bag.length?`https://wa.me/${WHATSAPP}?text=Hi UNLISTED YOUTH STREETWEAR, I want to order:%0A${lines}${saving?`%0ABundle saving: -${money(saving)}`:""}%0ATotal: ${money(total)}`:"#";
+  const lines=bag.map(i=>{const p=PRODUCTS.find(x=>x.id===i.id);return `${i.qty} x ${p.name} (${p.colors[i.ci].n}, ${i.size})`}).join("\n");
+  const text="Hi UNLISTED YOUTH STREETWEAR, I want to order:\n"+lines+(saving?"\nBundle saving: -"+money(saving):"")+"\nTotal: "+money(total);
+  $("checkout").href=bag.length?"https://wa.me/"+encodeURIComponent(WHATSAPP)+"?text="+encodeURIComponent(text):"#";
 }
 $("items").addEventListener("click",e=>{
   const b=e.target.closest("button[data-a]"); if(!b)return;
-  const key=b.closest(".item").dataset.key, it=bag.find(i=>i.key===key);
-  it.qty+=b.dataset.a==="+"?1:-1;
+  const key=b.closest(".item").dataset.key, it=bag.find(i=>i.key===key); if(!it)return;
+  it.qty=Math.min(MAX_QTY,it.qty+(b.dataset.a==="+"?1:-1));
   if(it.qty<=0)bag=bag.filter(i=>i!==it);
   renderBag();
 });
@@ -594,47 +661,143 @@ $("openBag").onclick=openBag; $("closeBag").onclick=closeBag; $("scrim").onclick
 document.addEventListener("keydown",e=>{if(e.key==="Escape")closeBag()});
 $("checkout").addEventListener("click",e=>{if(!bag.length)e.preventDefault()});
 
-// ===== Welcome: a paper sheet that rips into pieces after 2 seconds =====
+// ===== Welcome: two characters write the brand name, then the paper rips away =====
 document.addEventListener("DOMContentLoaded",()=>{
-  const w=$("welcome"), base=w.querySelector(".sheet");
-  base.querySelectorAll("img").forEach(i=>i.src=LOGO);
+  const w=$("welcome"), base=w.querySelector(".sheet"), svg=base.querySelector(".w-svg");
+  const rnd=(a,b)=>a+Math.random()*(b-a), cl=(v,a=0,b=1)=>Math.min(b,Math.max(a,v));
+  const ease=u=>.5-.5*Math.cos(Math.PI*cl(u)), lerp=(a,b,u)=>a+(b-a)*u, f=n=>n.toFixed(1);
+  const mix=(a,b,u)=>({x:lerp(a.x,b.x,u),y:lerp(a.y,b.y,u)});
+  const CEL=1300, END=1700, CY=218;   // celebration starts / ripping starts (ms)
+
+  // the three lines of the name: box, font size, baseline, write window, pen wobbles per half line
+  const LN=[
+    {x:20,w:360,y:32,h:128,fs:136,b:142,t0:100,t1:500,n:4},
+    {x:84,w:232,y:166,h:128,fs:134,b:272,t0:540,t1:850,n:3},
+    {x:20,w:360,y:300,h:108,fs:112,b:390,t0:890,t1:1300,n:5}
+  ];
+  LN.forEach((L,i)=>{
+    L.top=L.b-.72*L.fs; L.mid=(L.top+L.b)/2; L.amp=(L.b-L.top)*.4;
+    L.hl=svg.querySelector('.hl[data-i="'+i+'"]'); L.hr=svg.querySelector('.hr[data-i="'+i+'"]');
+  });
+  const CH=[{cx:42,sx:1},{cx:358,sx:-1}].map((c,s)=>{
+    const g=svg.querySelector('.ch[data-s="'+s+'"]'), q=k=>g.querySelector(k);
+    return Object.assign(c,{s,body:q(".bd"),pu:q(".pu"),mo:q(".mo"),eyes:g.querySelectorAll(".ey"),
+      fsl:q(".fsl"),fko:q(".fko"),fho:q(".fho"),ws:q(".ws"),wk:q(".wk"),pb:q(".pb"),pn:q(".pn"),wh:q(".wh")});
+  });
+  const tag=svg.querySelector(".w-tag");
+
+  // rubber-hose arm: sleeve + bare forearm along one bent curve from shoulder S to hand H
+  function arm(sl,fo,S,H,sx){
+    const dx=H.x-S.x, dy=H.y-S.y, len=Math.hypot(dx,dy)||1;
+    let nx=-dy/len, ny=dx/len;
+    if(Math.abs(nx)>Math.abs(ny)){if(nx*sx<0){nx=-nx;ny=-ny;}} else if(ny<0){nx=-nx;ny=-ny;}
+    const b=Math.min(46,len*.3+8), C={x:(S.x+H.x)/2+nx*b,y:(S.y+H.y)/2+ny*b};
+    const a=mix(S,C,.5), c2=mix(C,H,.5), m=mix(a,c2,.5);
+    sl.setAttribute("d","M"+f(S.x)+" "+f(S.y)+"Q"+f(a.x)+" "+f(a.y)+" "+f(m.x)+" "+f(m.y));
+    fo.setAttribute("d","M"+f(m.x)+" "+f(m.y)+"Q"+f(c2.x)+" "+f(c2.y)+" "+f(H.x)+" "+f(H.y));
+  }
+  // where a character's pen tip is at time t: rest, travel to a line, scribble along it, then wave
+  function pen(c,S,t){
+    const side=c.s, rest={x:S.x+c.sx*12,y:S.y+36};
+    const start=k=>({x:side?LN[k].x+LN[k].w:LN[k].x,y:LN[k].mid});
+    const end=k=>({x:LN[k].x+LN[k].w/2,y:LN[k].mid});
+    for(let k=0;k<3;k++){
+      const L=LN[k];
+      if(t<L.t0){const a=k?end(k-1):rest, pt=k?LN[k-1].t1:0; return mix(a,start(k),ease((t-pt)/(L.t0-pt)));}
+      if(t<=L.t1){const p=ease((t-L.t0)/(L.t1-L.t0)), e=p*L.w/2;
+        return {x:side?L.x+L.w-e:L.x+e, y:L.mid+(side?-1:1)*L.amp*Math.sin(p*2*Math.PI*L.n)};}
+    }
+    const wv={x:S.x+c.sx*8+Math.sin(t/90)*10*c.sx, y:S.y-92+Math.sin(t/140)*6};
+    return mix(end(2),wv,ease((t-LN[2].t1)/150));
+  }
+  function setBox(el,L,x,wd){
+    el.setAttribute("x",f(x)); el.setAttribute("width",f(wd));
+    el.setAttribute("viewBox",f(x)+" "+L.y+" "+f(Math.max(wd,.01))+" "+L.h);
+  }
+  // everything is drawn as a function of time, so the paper can be torn at any frame
+  function render(t){
+    LN.forEach(L=>{
+      const wd=ease((t-L.t0)/(L.t1-L.t0))*(L.w/2+1);
+      setBox(L.hl,L,L.x,wd);                 // left character writes from the left edge
+      setBox(L.hr,L,L.x+L.w-wd,wd);          // right character writes from the right edge
+    });
+    CH.forEach(c=>{
+      const jump=t>CEL+60?Math.abs(Math.sin((t-CEL-60)/90))*9:0;
+      const dy=Math.sin(t/230+c.s*1.7)*1.6-jump;
+      c.body.setAttribute("transform","translate("+c.cx+" "+f(CY+dy)+")");
+      const S={x:c.cx+c.sx*25,y:CY+dy+36}, S2={x:c.cx-c.sx*25,y:S.y};
+      const T=pen(c,S,t), d={x:-c.sx*.22,y:.975}, G={x:T.x+d.x*26,y:T.y+d.y*26};
+      arm(c.ws,c.wk,S,G,c.sx);
+      c.pn.setAttribute("x1",f(T.x));c.pn.setAttribute("y1",f(T.y));c.pn.setAttribute("x2",f(T.x+d.x*9));c.pn.setAttribute("y2",f(T.y+d.y*9));
+      c.pb.setAttribute("x1",f(T.x+d.x*9));c.pb.setAttribute("y1",f(T.y+d.y*9));c.pb.setAttribute("x2",f(T.x+d.x*46));c.pb.setAttribute("y2",f(T.y+d.y*46));
+      c.wh.setAttribute("cx",f(G.x));c.wh.setAttribute("cy",f(G.y));
+      // free arm hangs down, then goes up to cheer
+      const u=ease((t-CEL)/150);
+      const H=mix({x:S2.x-c.sx*5+Math.sin(t/300+c.s)*3,y:S2.y+38},{x:S2.x-c.sx*10+Math.sin(t/95+c.s*2)*10,y:S2.y-64},u);
+      arm(c.fsl,c.fko,S2,H,-c.sx);
+      c.fho.setAttribute("cx",f(H.x));c.fho.setAttribute("cy",f(H.y));
+      // face: eyes follow the pen, blink, big grin at the end
+      const v={x:T.x-c.cx,y:T.y-(CY+dy)}, n=Math.hypot(v.x,v.y)||1;
+      c.pu.setAttribute("transform","translate("+f(v.x/n*2.2)+" "+f(v.y/n*2.2)+")");
+      const blink=(t+c.s*600)%1900<110;
+      c.eyes.forEach(e=>e.setAttribute("ry",blink?.8:6));
+      if(t>=CEL){c.mo.setAttribute("d","M-8 13Q0 26 8 13Z");c.mo.setAttribute("fill","#4a1c14");}
+      else{c.mo.setAttribute("d","M-6 15Q0 19.5 6 15");c.mo.setAttribute("fill","none");}
+    });
+    tag.setAttribute("opacity",f(ease((t-CEL)/150)));
+  }
+
+  let raf=0, torn=false;
+  function tear(){
+    if(torn)return; torn=true; cancelAnimationFrame(raf); render(END);
+    const COLS=3, ROWS=3, SUB=7;
+    const nodes=[];
+    for(let r=0;r<=ROWS;r++){nodes[r]=[];for(let c=0;c<=COLS;c++){
+      const ex=c===0||c===COLS, ey=r===0||r===ROWS;
+      nodes[r][c]=[c/COLS*100+(ex?0:rnd(-5,5)), r/ROWS*100+(ey?0:rnd(-5,5))];
+    }}
+    // jagged torn edge between two corner points (shared by the two pieces that touch it)
+    const edge=(a,b,jx,jy)=>{const p=[];for(let i=0;i<=SUB;i++){const t=i/SUB,m=i>0&&i<SUB;
+      p.push([a[0]+(b[0]-a[0])*t+(m?rnd(-jx,jx):0),a[1]+(b[1]-a[1])*t+(m?rnd(-jy,jy):0)]);}return p;};
+    const H=[],V=[];
+    for(let r=0;r<=ROWS;r++){H[r]=[];for(let c=0;c<COLS;c++)H[r][c]=edge(nodes[r][c],nodes[r][c+1],0,(r===0||r===ROWS)?0:2.4);}
+    for(let r=0;r<ROWS;r++){V[r]=[];for(let c=0;c<=COLS;c++)V[r][c]=edge(nodes[r][c],nodes[r+1][c],(c===0||c===COLS)?0:2.4,0);}
+    const pieces=[], frag=document.createDocumentFragment();
+    for(let r=0;r<ROWS;r++)for(let c=0;c<COLS;c++){
+      const poly=H[r][c].concat(V[r][c+1],H[r+1][c].slice().reverse(),V[r][c].slice().reverse());
+      const cx=poly.reduce((a,p)=>a+p[0],0)/poly.length, cy=poly.reduce((a,p)=>a+p[1],0)/poly.length;
+      const piece=document.createElement("div"); piece.className="piece";
+      piece.style.transformOrigin=cx+"% "+cy+"%";
+      const cut=document.createElement("div"); cut.className="cut";
+      cut.style.clipPath="polygon("+poly.map(p=>p[0].toFixed(1)+"% "+p[1].toFixed(1)+"%").join(",")+")";
+      cut.appendChild(base.cloneNode(true)); piece.appendChild(cut); frag.appendChild(piece);
+      pieces.push({el:piece,dx:(cx-50)*rnd(1.2,2.2),dy:(cy-50)*rnd(1.2,2.2)+rnd(35,70),rot:rnd(-70,70)});
+    }
+    base.remove(); w.appendChild(frag);
+    w.classList.add("rip");
+    setTimeout(()=>{
+      w.classList.remove("rip");
+      pieces.forEach(p=>{const d=Math.round(rnd(0,160));
+        p.el.style.transitionDelay=d+"ms,"+(d+800)+"ms";
+        p.el.style.transform="translate("+p.dx+"vw,"+p.dy+"vh) rotate("+p.rot+"deg)";
+        p.el.style.opacity="0";});
+      setTimeout(()=>w.remove(),1500);
+    },250);
+  }
+
   if(matchMedia("(prefers-reduced-motion: reduce)").matches){
+    render(END);
     setTimeout(()=>{w.classList.add("fade");setTimeout(()=>w.remove(),500)},2000);
     return;
   }
-  const COLS=3, ROWS=3, SUB=7, rnd=(a,b)=>a+Math.random()*(b-a);
-  const nodes=[];
-  for(let r=0;r<=ROWS;r++){nodes[r]=[];for(let c=0;c<=COLS;c++){
-    const ex=c===0||c===COLS, ey=r===0||r===ROWS;
-    nodes[r][c]=[c/COLS*100+(ex?0:rnd(-5,5)), r/ROWS*100+(ey?0:rnd(-5,5))];
-  }}
-  // jagged torn edge between two corner points (shared by the two pieces that touch it)
-  const edge=(a,b,jx,jy)=>{const p=[];for(let i=0;i<=SUB;i++){const t=i/SUB,m=i>0&&i<SUB;
-    p.push([a[0]+(b[0]-a[0])*t+(m?rnd(-jx,jx):0),a[1]+(b[1]-a[1])*t+(m?rnd(-jy,jy):0)]);}return p;};
-  const H=[],V=[];
-  for(let r=0;r<=ROWS;r++){H[r]=[];for(let c=0;c<COLS;c++)H[r][c]=edge(nodes[r][c],nodes[r][c+1],0,(r===0||r===ROWS)?0:2.4);}
-  for(let r=0;r<ROWS;r++){V[r]=[];for(let c=0;c<=COLS;c++)V[r][c]=edge(nodes[r][c],nodes[r+1][c],(c===0||c===COLS)?0:2.4,0);}
-  const pieces=[], frag=document.createDocumentFragment();
-  for(let r=0;r<ROWS;r++)for(let c=0;c<COLS;c++){
-    const poly=H[r][c].concat(V[r][c+1],H[r+1][c].slice().reverse(),V[r][c].slice().reverse());
-    const cx=poly.reduce((a,p)=>a+p[0],0)/poly.length, cy=poly.reduce((a,p)=>a+p[1],0)/poly.length;
-    const piece=document.createElement("div"); piece.className="piece";
-    piece.style.transformOrigin=cx+"% "+cy+"%";
-    const cut=document.createElement("div"); cut.className="cut";
-    cut.style.clipPath="polygon("+poly.map(p=>p[0].toFixed(1)+"% "+p[1].toFixed(1)+"%").join(",")+")";
-    cut.appendChild(base.cloneNode(true)); piece.appendChild(cut); frag.appendChild(piece);
-    pieces.push({el:piece,dx:(cx-50)*rnd(1.2,2.2),dy:(cy-50)*rnd(1.2,2.2)+rnd(35,70),rot:rnd(-70,70)});
-  }
-  base.remove(); w.appendChild(frag);
-  setTimeout(()=>w.classList.add("rip"),1750);
-  setTimeout(()=>{
-    w.classList.remove("rip");
-    pieces.forEach(p=>{const d=Math.round(rnd(0,160));
-      p.el.style.transitionDelay=d+"ms,"+(d+800)+"ms";
-      p.el.style.transform=`translate(${p.dx}vw,${p.dy}vh) rotate(${p.rot}deg)`;
-      p.el.style.opacity="0";});
-    setTimeout(()=>w.remove(),1500);
-  },2000);
+  render(0);
+  const start=performance.now();
+  (function tick(now){
+    const t=now-start;
+    if(t>=END){tear();return;}
+    render(t); raf=requestAnimationFrame(tick);
+  })(start);
+  w.addEventListener("click",tear);   // tap to skip
 });
 
 // ===== Drop countdown =====
@@ -652,9 +815,16 @@ document.addEventListener("DOMContentLoaded",()=>{
 })();
 
 // ===== Newsletter: Netlify Forms collects signups and emails them to you (set up in Netlify) =====
+const EMAIL_RE=/^[^\s@<>"'`]{1,64}@[^\s@<>"'`]{1,190}\.[A-Za-z]{2,}$/, PAGE_OPENED=Date.now();
+let lastSend=0;
 $("news").addEventListener("submit",async e=>{
   e.preventDefault();
-  const form=e.target, email=form.querySelector('input[name="email"]').value.trim(), msg=$("newsMsg"), btn=form.querySelector("button");
+  const form=e.target, email=form.querySelector('input[name="email"]').value.trim().slice(0,254), msg=$("newsMsg"), btn=form.querySelector("button");
+  if(form.querySelector('input[name="bot-field"]').value){msg.textContent="You’re on the list. We’ll message you before the next drop.";return;} // bots fill the hidden field: pretend it worked
+  if(Date.now()-PAGE_OPENED<2500){msg.textContent="One moment, then try again.";return;}
+  if(!EMAIL_RE.test(email)){msg.textContent="Please enter a valid email address.";return;}
+  if(Date.now()-lastSend<30000){msg.textContent="Please wait 30 seconds before sending again.";return;}
+  lastSend=Date.now();
   btn.disabled=true; msg.textContent="Sending…";
   try{
     const r=await fetch("/",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},
