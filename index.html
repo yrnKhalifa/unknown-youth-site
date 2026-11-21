@@ -3,154 +3,230 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>UNLISTED YOUTH STREETWEAR — Made in Ho, Ghana</title>
+<title>UNLISTED YOUTH STREETWEAR — Made in Ghana 🇬🇭</title>
 <meta name="description" content="UNLISTED YOUTH STREETWEAR: tees, armless tops, baggy jeans, jackets and socks. Off the list.">
 <meta name="theme-color" content="#1a1a1a">
 <meta property="og:type" content="website">
-<meta property="og:title" content="UNLISTED YOUTH STREETWEAR — Made in Ho, Ghana">
+<meta property="og:title" content="UNLISTED YOUTH STREETWEAR — Made in Ghana 🇬🇭">
 <meta property="og:description" content="Tees, armless tops, baggy jeans, jackets and socks. Off the list.">
 <link rel="icon" id="fav" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Instrument+Serif:ital@0;1&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
   --cement:#dedbd5; --paper:#efede8; --ink:#1a1a1a; --red:#d1382c; --gold:#e3a72f;
   --display:"Big Shoulders Display","Impact","Arial Narrow",sans-serif;
+  --serif:"Instrument Serif",Georgia,"Times New Roman",serif;
   --body:"Work Sans","Helvetica Neue",Arial,sans-serif;
+  --pad:clamp(16px,4vw,48px);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:var(--body);background:var(--paper);color:var(--ink);line-height:1.55;-webkit-text-size-adjust:100%}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);line-height:1.55;-webkit-text-size-adjust:100%;overflow-x:hidden}
 a{color:inherit}
 button{font:inherit;cursor:pointer}
-:focus-visible{outline:3px solid var(--red);outline-offset:2px}
-.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
-h1,h2,h3{font-family:var(--display);font-weight:900;line-height:.95;text-transform:uppercase;letter-spacing:.01em}
-
-
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.wrap{max-width:1320px;margin:0 auto;padding:0 var(--pad)}
+h1,h2,h3{font-family:var(--display);font-weight:900;line-height:.88;text-transform:uppercase;letter-spacing:-.005em}
 .uy-logo{display:block;height:auto}
+
+/* shared editorial bits */
+.kicker{display:flex;justify-content:space-between;gap:16px;border-top:4px solid currentColor;padding-top:12px;margin-bottom:clamp(20px,4vw,40px);font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase}
+.h2-xl{font-size:clamp(54px,14vw,220px);overflow-wrap:anywhere;line-height:.82}
+.serif{font-family:var(--serif);font-style:italic;font-weight:400;text-transform:none;letter-spacing:0}
+.btn{display:inline-flex;align-items:center;gap:12px;background:var(--ink);color:var(--paper);padding:16px 28px;text-decoration:none;font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;border:0;transition:background .2s,color .2s}
+.btn:hover{background:var(--red);color:#fff}
+section{padding:clamp(64px,10vw,128px) 0}
+
 /* header */
 header{position:sticky;top:0;z-index:20;background:var(--ink);color:var(--paper)}
-header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:900;font-size:22px;letter-spacing:.04em}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-family:var(--display);font-weight:900;font-size:22px;letter-spacing:.04em}
 .brand .uy-logo{width:34px;height:34px}
-nav{display:flex;gap:18px;align-items:center;font-size:15px}
+nav{display:flex;gap:26px;align-items:center;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
 nav a{text-decoration:none}
 nav a:hover{color:var(--gold)}
-.wa{display:flex;align-items:center;gap:6px;background:#25d366;color:#06361b;padding:8px 12px;font-weight:600;text-decoration:none}
-.wa:hover{background:#1ebe5b}
-.bag-btn{background:var(--red);color:#fff;border:0;padding:8px 14px;font-weight:600}
-@media(max-width:560px){nav .hide-s{display:none}nav{gap:8px}.wa span{display:none}.wa{padding:8px 10px}.brand{font-size:19px}}
+.wa{display:flex;align-items:center;gap:6px;background:#25d366;color:#06361b;padding:9px 13px;font-weight:600;text-decoration:none}
+.wa:hover{background:#1ebe5b;color:#06361b}
+.bag-btn{white-space:nowrap;background:var(--red);color:#fff;border:0;padding:10px 16px;font-weight:600;font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+.bag-btn:hover{background:#fff;color:var(--ink)}
+@media(max-width:700px){nav .hide-s{display:none}nav{gap:8px}.wa span{display:none}.wa{padding:9px 10px}.brand{font-size:19px}}
 
 /* hero */
-.hero{background:var(--cement);border-bottom:4px solid var(--ink);overflow:hidden}
-.hero .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:24px;align-items:center;padding-top:56px;padding-bottom:56px}
-.hero h1{font-size:clamp(64px,15vw,168px)}
-.hero p{max-width:34ch;margin:20px 0 28px;font-size:18px}
-.btn{display:inline-block;background:var(--ink);color:var(--paper);padding:14px 26px;text-decoration:none;font-weight:600;border:0}
-.btn:hover{background:var(--red)}
-.hero-logo{width:min(300px,70vw);background:#000;padding:14px;justify-self:center}
-@media(max-width:700px){.hero .wrap{grid-template-columns:1fr}.hero-logo{width:150px;padding:8px;order:-1;justify-self:start}}
+.hero{background:var(--paper);border-bottom:4px solid var(--ink);padding:clamp(20px,4vw,40px) 0 clamp(28px,5vw,56px);overflow:hidden}
+.hero-meta{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;padding-bottom:12px;border-bottom:2px solid var(--ink);font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase}
+.hero h1{font-size:clamp(84px,25vw,330px);line-height:.8;letter-spacing:-.02em;margin:clamp(20px,4vw,48px) 0 clamp(24px,4vw,48px)}
+.hero h1 span{display:block}
+.hero h1 .out{color:transparent;-webkit-text-stroke:clamp(2px,.4vw,5px) var(--ink)}
+.hero h1 .red{color:var(--red)}
+.hero-foot{display:flex;flex-wrap:wrap;gap:28px 40px;align-items:flex-end;justify-content:space-between}
+.hero-foot p{font-family:var(--serif);font-style:italic;font-size:clamp(24px,3.2vw,40px);line-height:1.12;max-width:20em}
+.hero-side{display:flex;align-items:flex-end;gap:20px}
+.hero-logo{width:clamp(84px,12vw,140px);background:#000;padding:10px}
 
-.strip{background:var(--red);color:#fff;font-family:var(--display);font-weight:700;font-size:22px;white-space:nowrap;overflow:hidden;padding:8px 0}
-.strip div{display:inline-block;padding-left:100%;animation:slide 28s linear infinite}
+@media(min-width:900px){
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(32px,5vw,80px);align-items:end}
+  .hero h1{font-size:min(19vw,290px);margin-bottom:0}
+  .hero-foot{flex-direction:column;align-items:flex-start;justify-content:flex-end;padding-bottom:.5vw}
+  .hero-side{flex-direction:column;align-items:flex-start;gap:24px}
+}
+/* marquee */
+.strip{background:var(--red);color:#fff;font-family:var(--display);font-weight:900;font-size:clamp(22px,3vw,34px);letter-spacing:.04em;text-transform:uppercase;white-space:nowrap;overflow:hidden;padding:10px 0;border-bottom:4px solid var(--ink)}
+.strip div{display:inline-block;padding-left:100%;animation:slide 32s linear infinite}
 @keyframes slide{to{transform:translateX(-100%)}}
-@media(prefers-reduced-motion:reduce){.strip div{animation:none;padding-left:20px}html{scroll-behavior:auto}}
+@media(prefers-reduced-motion:reduce){.strip div{animation:none;padding-left:20px}html{scroll-behavior:auto}.card .art img{transition:none}}
+
+/* drop countdown */
+.drop{background:var(--ink);color:var(--paper);display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;gap:6px 20px;text-align:center;padding:18px var(--pad)}
+.drop strong{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase}
+.drop span{font-family:var(--display);font-weight:900;font-size:clamp(34px,6vw,64px);line-height:1;color:var(--gold);font-variant-numeric:tabular-nums;letter-spacing:.02em}
+.drop[hidden]{display:none}
 
 /* shop */
-section{padding:72px 0}
-.sec-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px;margin-bottom:28px}
-.sec-head h2{font-size:clamp(40px,8vw,72px)}
+.sec-head{display:flex;flex-direction:column;gap:24px;margin-bottom:clamp(28px,5vw,56px)}
 .filters{display:flex;flex-wrap:wrap;gap:8px}
-.filters button{background:transparent;border:2px solid var(--ink);padding:6px 14px;font-weight:500}
+.filters button{background:transparent;border:2px solid var(--ink);border-radius:999px;padding:8px 18px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;transition:background .15s,color .15s}
+.filters button:hover{background:var(--cement)}
 .filters button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px}
-.card{background:#fff;border:2px solid var(--ink);display:flex;flex-direction:column}
-.art{background:var(--cement);border-bottom:2px solid var(--ink);padding:14px}
-.stage{position:relative;container-type:inline-size;width:min(100%,236px);margin:0 auto}
-.stage svg{display:block;width:100%;height:auto}
-.stage .uy-logo{position:absolute}
-.art.photo{padding:0;background:#fff}
-.art img{display:block;width:100%;height:auto}
-.info{padding:14px;display:flex;flex-direction:column;gap:10px;flex:1}
-.info h3{font-size:28px}
-.info p{font-size:14px;color:#444}
-.row{display:flex;justify-content:space-between;align-items:center;gap:8px}
-.price{font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));gap:clamp(36px,5vw,64px) clamp(16px,2.5vw,32px)}
+.card{display:flex;flex-direction:column;background:none;border:0}
+.art{position:relative;background:var(--cement);aspect-ratio:828/1097;overflow:hidden}
+.art img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.card:hover .art img{transform:scale(1.05)}
+.idx{position:absolute;top:8px;right:12px;font-family:var(--display);font-weight:900;font-size:clamp(40px,5vw,60px);line-height:1;color:#fff;mix-blend-mode:difference;pointer-events:none}
+.tag{position:absolute;left:0;bottom:0;background:var(--ink);color:var(--paper);font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:8px 12px}
+.tag.out{background:var(--red);color:#fff}
+.info{padding-top:16px;display:flex;flex-direction:column;gap:12px;flex:1}
+.row{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.info h3{font-size:clamp(28px,3vw,36px);line-height:.92}
+.price{font-family:var(--display);font-weight:900;font-size:26px;line-height:1;white-space:nowrap}
+.info p{font-size:14px;color:#444;max-width:34ch}
+.info .row.meta{align-items:center;border-top:1px solid var(--ink);padding-top:12px;font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
 .swatches{display:flex;gap:8px}
-.sw{width:26px;height:26px;border-radius:50%;border:2px solid var(--ink);padding:0}
+.sw{width:28px;height:28px;border-radius:50%;border:2px solid var(--ink);padding:0}
 .sw[aria-pressed="true"]{outline:3px solid var(--red);outline-offset:2px}
-select{font:inherit;padding:6px;border:2px solid var(--ink);background:#fff}
-.add{margin-top:auto;width:100%;background:var(--ink);color:var(--paper);border:0;padding:12px;font-weight:600}
-.add:hover{background:var(--red)}
+select{font:inherit;font-size:13px;font-weight:600;padding:6px 4px;border:0;border-bottom:2px solid var(--ink);background:transparent;border-radius:0;color:var(--ink)}
+.add{margin-top:auto;width:100%;background:var(--ink);color:var(--paper);border:0;padding:16px;font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase;transition:background .2s}
+.add:hover{background:var(--red);color:#fff}
+.add:disabled{background:#999;color:#eee;cursor:not-allowed}
+
+.promo{margin-top:clamp(48px,8vw,96px);background:var(--red);color:#fff;padding:clamp(24px,4vw,48px);display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center}
+.promo h3{font-size:clamp(40px,7vw,88px);line-height:.85;margin-bottom:14px}
+.promo p{max-width:44ch;font-size:17px}
+.promo .btn{background:var(--ink);color:var(--paper)}
+.promo .btn:hover{background:#fff;color:var(--ink)}
+.promo :focus-visible{outline-color:#fff}
 
 /* story */
 .story{background:var(--ink);color:var(--paper)}
-.story h2{font-size:clamp(40px,8vw,72px);margin-bottom:12px}
-.story .lead{max-width:60ch;font-size:19px;margin-bottom:40px;color:#ddd}
-.timeline{border-left:4px solid var(--red);padding-left:24px;display:grid;gap:30px;max-width:720px}
-.timeline h3{font-size:34px;color:var(--gold)}
-.timeline p{color:#ddd;max-width:56ch}
+.story .lead{font-family:var(--serif);font-style:italic;font-size:clamp(26px,4vw,52px);line-height:1.08;max-width:24em;margin:clamp(24px,4vw,48px) 0 clamp(48px,8vw,96px);color:#fff}
+.timeline{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:40px 28px}
+.timeline>div{border-top:2px solid rgba(239,237,232,.35);padding-top:20px}
+.timeline .yr{display:block;text-transform:uppercase;font-family:var(--display);font-weight:900;font-size:clamp(64px,9vw,120px);line-height:.85;color:transparent;-webkit-text-stroke:2px var(--gold);margin-bottom:18px}
+.timeline h3{font-size:clamp(26px,3vw,34px);color:var(--gold);margin-bottom:10px;line-height:.95}
+.timeline p{color:#d8d5ce;max-width:34ch;font-size:16px}
 
 /* values */
-.values{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
-.values div{border:2px solid var(--ink);padding:22px;background:#fff}
-.values h3{font-size:32px;margin-bottom:8px}
-.values-wrap h2{font-size:clamp(40px,8vw,72px);margin-bottom:28px}
+.values{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:40px 32px}
+.values>div{border-top:4px solid var(--ink);padding-top:16px}
+.values .num{display:block;font-family:var(--display);font-weight:900;font-size:clamp(72px,9vw,128px);line-height:.85;color:var(--red);margin-bottom:16px}
+.values h3{font-size:clamp(34px,4.2vw,54px);margin-bottom:12px}
+.values p{max-width:32ch;font-size:17px}
+
+/* sizes */
+.sizes{background:var(--cement);border-top:4px solid var(--ink)}
+.note{font-family:var(--serif);font-style:italic;font-size:clamp(22px,2.6vw,32px);line-height:1.15;max-width:32em;margin:clamp(20px,3vw,32px) 0 clamp(32px,5vw,56px)}
+.note.small{font-size:clamp(18px,2vw,22px);margin:36px 0 0}
+.tables{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:48px 56px}
+.tables h3{font-size:clamp(30px,3.5vw,44px);margin-bottom:16px}
+.tbl{overflow-x:auto}
+table{width:100%;border-collapse:collapse}
+th,td{padding:12px 0;text-align:left;border-bottom:1px solid var(--ink)}
+th{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;border-bottom:2px solid var(--ink);padding-bottom:10px}
+td{font-family:var(--display);font-weight:900;font-size:30px;line-height:1.1}
+
+/* faq */
+.faq-list{max-width:900px}
+.faq details{border-top:2px solid var(--ink)}
+.faq details:last-child{border-bottom:2px solid var(--ink)}
+.faq summary{display:flex;justify-content:space-between;align-items:center;gap:20px;cursor:pointer;list-style:none;padding:22px 0;font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(26px,3.4vw,42px);line-height:.95}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.2em;line-height:.7;flex:none;transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg);color:var(--red)}
+.faq details p{padding:0 0 24px;max-width:56ch;font-size:17px}
 
 /* contact */
-.contact{background:var(--cement);border-top:4px solid var(--ink)}
-.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:32px}
-.contact h2{font-size:clamp(36px,7vw,60px);margin-bottom:12px}
-.contact form{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
-.contact input{flex:1;min-width:180px;padding:12px;border:2px solid var(--ink);font:inherit}
-.contact button{padding:12px 20px;background:var(--ink);color:var(--paper);border:0;font-weight:600}
-@media(max-width:700px){.contact .wrap{grid-template-columns:1fr}}
-footer{background:var(--ink);color:#bbb;text-align:center;padding:22px;font-size:14px}
+.contact{background:var(--gold);border-top:4px solid var(--ink)}
+.contact .cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px)}
+.contact h2{font-size:clamp(48px,8vw,112px);line-height:.85;margin-bottom:20px}
+.contact p{font-size:17px;max-width:40ch}
+.contact a{font-weight:600;text-underline-offset:3px}
+.contact form{display:flex;gap:0;flex-wrap:wrap;margin-top:20px}
+.contact input{flex:1;min-width:180px;padding:16px;border:2px solid var(--ink);border-radius:0;background:#fff;font:inherit}
+.contact button{padding:16px 24px;background:var(--ink);color:var(--paper);border:2px solid var(--ink);font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.contact button:hover{background:var(--red);border-color:var(--red);color:#fff}
+.contact :focus-visible{outline-color:var(--ink)}
+@media(max-width:760px){.contact .cols{grid-template-columns:1fr}.contact button{width:100%}}
+
+/* footer */
+footer{background:var(--ink);color:#bbb;padding:clamp(40px,6vw,72px) 0 0;overflow:hidden}
+footer .small{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase}
+.mega{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(96px,27vw,420px);line-height:.74;letter-spacing:-.02em;color:transparent;-webkit-text-stroke:1.5px rgba(239,237,232,.35);margin-top:clamp(24px,4vw,48px);white-space:nowrap;user-select:none}
+
+
+/* consent banner + policy dialog */
+.consent{position:fixed;left:0;right:0;bottom:0;z-index:25;background:var(--ink);color:var(--paper);border-top:4px solid var(--red);padding:18px var(--pad) calc(18px + env(safe-area-inset-bottom,0px));display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between;transform:translateY(110%);visibility:hidden;transition:transform .35s cubic-bezier(.2,.7,.2,1),visibility 0s .35s}
+.consent.show{transform:none;visibility:visible;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.consent h2{font-size:clamp(30px,4vw,44px);margin-bottom:6px;color:var(--gold)}
+.consent p{max-width:62ch;font-size:14px;color:#ddd}
+.consent .acts{display:flex;flex-wrap:wrap;gap:8px}
+.consent .acts .btn{padding:14px 24px}
+.consent .acts .btn:not(.ghost){background:var(--gold);color:var(--ink)}
+.consent .acts .btn:not(.ghost):hover{background:var(--red);color:#fff}
+.btn.ghost{background:transparent;border:2px solid currentColor;padding:12px 22px}
+.btn.ghost:hover{background:var(--paper);color:var(--ink)}
+.linkbtn{background:none;border:0;color:inherit;font:inherit;letter-spacing:inherit;text-transform:inherit;text-decoration:underline;text-underline-offset:3px;cursor:pointer;padding:0}
+.linkbtn:hover{color:var(--gold)}
+.consent-open .float-wa{display:none}
+.policy{border:4px solid var(--ink);background:var(--paper);color:var(--ink);padding:0;width:min(680px,calc(100% - 24px));max-height:calc(100% - 24px);margin:auto;overflow:auto}
+.policy::backdrop{background:rgba(0,0,0,.6)}
+.policy .p-head{position:sticky;top:0;background:var(--ink);color:var(--paper);display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 20px}
+.policy .p-head h2{font-size:clamp(28px,5vw,40px)}
+.policy .p-body{padding:20px}
+.policy h3{font-size:26px;margin:22px 0 6px;color:var(--red)}
+.policy h3:first-child{margin-top:0}
+.policy p{font-size:16px;max-width:60ch}
+.policy .status{margin-top:22px;padding:12px 14px;border:2px solid var(--ink);font-weight:600;font-size:14px}
+.policy .acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.policy .btn.ghost:hover{background:var(--ink);color:var(--paper)}
+@media(prefers-reduced-motion:reduce){.consent,.consent.show{transition:none}}
+/* floating chat */
+.float-wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));width:58px;height:58px;border-radius:50%;background:#25d366;color:#06361b;display:flex;align-items:center;justify-content:center;z-index:15;box-shadow:0 4px 14px rgba(0,0,0,.35)}
 
 /* bag drawer */
-.scrim{position:fixed;inset:0;background:rgba(0,0,0,.5);opacity:0;pointer-events:none;transition:opacity .2s;z-index:30}
+.scrim{position:fixed;inset:0;background:rgba(0,0,0,.55);opacity:0;pointer-events:none;transition:opacity .2s;z-index:30}
 .scrim.open{opacity:1;pointer-events:auto}
-.drawer{position:fixed;top:0;right:0;height:100%;width:min(400px,100%);background:var(--paper);border-left:4px solid var(--ink);z-index:31;transform:translateX(100%);transition:transform .25s;display:flex;flex-direction:column}
+.drawer{position:fixed;top:0;right:0;height:100%;width:min(440px,100%);background:var(--paper);border-left:4px solid var(--ink);z-index:31;transform:translateX(100%);transition:transform .25s;display:flex;flex-direction:column}
 .drawer.open{transform:none}
 .drawer header{position:static}
-.drawer h2{font-size:30px}
-.items{flex:1;overflow:auto;padding:16px}
-.item{display:flex;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid #bbb;font-size:15px}
-.item small{color:#555;display:block}
-.qty{display:flex;align-items:center;gap:6px;margin-top:6px}
-.qty button{width:28px;height:28px;border:2px solid var(--ink);background:#fff}
-.empty{color:#555;padding:20px 0}
-.foot{padding:16px;border-top:2px solid var(--ink)}
-.total{display:flex;justify-content:space-between;font-weight:600;font-size:18px;margin-bottom:12px}
-.foot .btn{width:100%;text-align:center}
-.close{background:transparent;border:2px solid var(--paper);color:var(--paper);padding:4px 12px}
+.drawer h2{font-size:34px}
+.items{flex:1;overflow:auto;padding:16px 20px}
+.item{display:flex;justify-content:space-between;gap:12px;padding:16px 0;border-bottom:1px solid var(--ink);font-size:15px}
+.item strong{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:22px;line-height:1}
+.item small{color:#555;display:block;margin-top:4px}
+.qty{display:flex;align-items:center;gap:10px;margin-top:10px;font-weight:600}
+.qty button{width:30px;height:30px;border:2px solid var(--ink);background:#fff}
+.qty button:hover{background:var(--ink);color:var(--paper)}
+.empty{color:#555;padding:20px 0;font-family:var(--serif);font-style:italic;font-size:24px;line-height:1.15}
+.foot{padding:20px;border-top:4px solid var(--ink)}
+.total{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:30px;margin-bottom:14px}
+.saving[hidden]{display:none}
+.saving{display:flex;justify-content:space-between;color:var(--red);font-weight:600;margin-bottom:10px}
+.foot .btn{width:100%;justify-content:center}
+.close{background:transparent;border:2px solid var(--paper);color:var(--paper);padding:5px 14px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.close:hover{background:var(--paper);color:var(--ink)}
 
-/* drop countdown, tags, promo, size guide, FAQ, floating chat */
-.drop{background:var(--gold);color:var(--ink);text-align:center;padding:10px 12px}
-.drop strong{font-family:var(--display);font-size:24px;text-transform:uppercase;margin-right:12px}
-.drop span{font-size:20px;font-weight:600;font-variant-numeric:tabular-nums}
-.art{position:relative}
-.tag{position:absolute;top:10px;left:10px;background:var(--ink);color:var(--paper);font-size:12px;font-weight:600;padding:4px 8px}
-.tag.out{background:var(--red)}
-.add:disabled{background:#999;cursor:not-allowed}
-.promo{margin-top:28px;border:2px dashed var(--ink);background:#fff;padding:18px;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center}
-.promo h3{font-size:32px;margin-bottom:4px}
-.promo p{max-width:48ch}
-.sizes-wrap h2{font-size:clamp(40px,8vw,72px);margin-bottom:14px}
-.sizes-wrap h3{font-size:30px;margin:22px 0 10px}
-.note{max-width:62ch;margin-bottom:8px}
-.tbl{overflow-x:auto}
-table{width:100%;max-width:520px;border-collapse:collapse;background:#fff;border:2px solid var(--ink)}
-th,td{padding:10px 14px;text-align:left;border-bottom:1px solid #ccc}
-th{background:var(--ink);color:var(--paper)}
-.faq{background:var(--cement);border-top:4px solid var(--ink)}
-.faq details{border:2px solid var(--ink);background:#fff;padding:14px;margin-bottom:10px;max-width:720px}
-.faq summary{font-weight:600;cursor:pointer}
-.faq details p{margin-top:8px}
-.float-wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));width:58px;height:58px;border-radius:50%;background:#25d366;color:#06361b;display:flex;align-items:center;justify-content:center;z-index:15;box-shadow:0 4px 14px rgba(0,0,0,.35)}
-.saving{display:flex;justify-content:space-between;color:var(--red);font-weight:600;margin-bottom:8px}
 
 /* welcome: a sheet of paper that tears into pieces after 2 seconds */
 .welcome{position:fixed;inset:0;z-index:100;touch-action:none;animation:wFallback .5s ease-in 6s forwards}
@@ -203,12 +279,17 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 <main id="top">
   <div class="hero">
     <div class="wrap">
-      <div>
-        <h1>Off the list.</h1>
+      <div class="hero-meta"><span>Made in Ghana 🇬🇭</span><span>Est. 2025</span><span>Drop 01 / 2026</span></div>
+      <div class="hero-grid">
+      <h1><span>Off <span class="out" style="display:inline">the</span></span><span class="red">list.</span></h1>
+      <div class="hero-foot">
         <p>Tees, armless tops, baggy jeans, jackets and socks, made in Ghana for the ones still figuring it out.</p>
-        <a class="btn" href="#shop">Shop the drop</a>
+        <div class="hero-side">
+          <a class="btn" href="#shop">Shop the drop <span aria-hidden="true">↓</span></a>
+          <img class="uy-logo hero-logo" data-logo alt="UNLISTED YOUTH STREETWEAR logo">
+        </div>
       </div>
-      <img class="uy-logo hero-logo" data-logo alt="UNLISTED YOUTH STREETWEAR logo">
+      </div>
     </div>
   </div>
   <div class="strip" aria-hidden="true"><div>UNLISTED YOUTH STREETWEAR &nbsp;★&nbsp; Made in Ghana &nbsp;★&nbsp; Pay with Mobile Money &nbsp;★&nbsp; Delivery nationwide &nbsp;★&nbsp; UNLISTED YOUTH STREETWEAR &nbsp;★&nbsp; Made in Ghana &nbsp;★&nbsp; Pay with Mobile Money &nbsp;★&nbsp; Delivery nationwide</div></div>
@@ -217,37 +298,42 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 
   <section id="shop">
     <div class="wrap">
+      <div class="kicker"><span>01</span><span>Shop</span></div>
       <div class="sec-head">
-        <h2>The drop</h2>
+        <h2 class="h2-xl">The drop</h2>
         <div class="filters" id="filters"></div>
       </div>
       <div class="grid" id="grid"></div>
       <div class="promo">
         <div><h3>Jacket + socks bundle</h3><p>Buy any jacket and a pair of socks together and save <span id="bundleAmt"></span>. The saving is applied in your bag automatically.</p></div>
-        <a class="btn" href="#shop">Build your bundle</a>
+        <a class="btn" href="#shop">Build your bundle <span aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
 
   <section class="story" id="story">
     <div class="wrap">
-      <h2>Our story</h2>
+      <div class="kicker"><span>02</span><span>Our story</span></div>
+      <h2 class="h2-xl">Our story</h2>
       <p class="lead"><!-- EDIT: replace with your real story -->UNLISTED YOUTH STREETWEAR started with a simple feeling: nobody hands you a map at this age. We make clothes for people who are still building who they are, and who are fine not having every answer yet.</p>
       <div class="timeline">
         <div>
-          <h3>2025: The question</h3>
+          <span class="yr">2025</span>
+          <h3>The question</h3>
           <p>Sketches, fabric swatches and a name that stuck. “Unlisted” wasn’t about hiding. It was about being off everyone’s list and open to whatever comes next.</p>
         </div>
         <div>
-          <h3>2026: The first drop</h3>
+          <span class="yr">2026</span>
+          <h3>The first drop</h3>
           <p>The first run went out to friends, classmates and the first believers. Every piece carried the logo and a line we meant.</p>
         </div>
         <div>
-          <h3>Now: The full range</h3>
+          <span class="yr">Now</span>
+          <h3>The full range</h3>
           <p>Tees, armless tops, baggy jeans, jackets and socks. Loose fits, heavy fabric, one logo.</p>
         </div>
         <div>
-          <h3>Next</h3>
+          <span class="yr">Next</span>
           <p>More colours, more pieces and pop-ups on campuses across Ghana.</p>
         </div>
       </div>
@@ -255,78 +341,128 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   </section>
 
   <section>
-    <div class="wrap values-wrap">
-      <h2>What we stand for</h2>
+    <div class="wrap">
+      <div class="kicker"><span>03</span><span>Values</span></div>
+      <h2 class="h2-xl" style="margin-bottom:clamp(32px,5vw,64px)">What we stand for</h2>
       <div class="values">
-        <div><h3>Heavy fabric</h3><p>Thick cotton fleece and sturdy denim that keep their shape wash after wash.</p></div>
-        <div><h3>Baggy on purpose</h3><p>Roomy cuts designed for comfort, movement and a strong silhouette.</p></div>
-        <div><h3>Made at home</h3><p>Designed and finished in Ghana, with every order packed by hand.</p></div>
+        <div><span class="num" aria-hidden="true">01</span><h3>Heavy fabric</h3><p>Thick cotton fleece and sturdy denim that keep their shape wash after wash.</p></div>
+        <div><span class="num" aria-hidden="true">02</span><h3>Baggy on purpose</h3><p>Roomy cuts designed for comfort, movement and a strong silhouette.</p></div>
+        <div><span class="num" aria-hidden="true">03</span><h3>Made at home</h3><p>Designed and finished in Ghana, with every order packed by hand.</p></div>
       </div>
     </div>
   </section>
 
-  <section id="sizes">
-    <div class="wrap sizes-wrap">
-      <h2>Size guide</h2>
+  <section class="sizes" id="sizes">
+    <div class="wrap">
+      <div class="kicker"><span>04</span><span>Sizes</span></div>
+      <h2 class="h2-xl">Size guide</h2>
       <p class="note"><!-- EDIT: measure your real pieces and update these numbers -->Flat measurements in cm. Our cuts are baggy on purpose, so your usual size gives the fit in the photos. Want it closer? Go one size down.</p>
-      <h3>Tees, armless top and jackets</h3>
-      <div class="tbl"><table>
-        <tr><th>Size</th><th>Chest (flat)</th><th>Length</th></tr>
-        <tr><td>S</td><td>56</td><td>68</td></tr>
-        <tr><td>M</td><td>58</td><td>70</td></tr>
-        <tr><td>L</td><td>60</td><td>72</td></tr>
-        <tr><td>XL</td><td>62</td><td>74</td></tr>
-      </table></div>
-      <h3>Baggy jeans</h3>
-      <div class="tbl"><table>
-        <tr><th>Size</th><th>Waist (flat)</th><th>Length</th></tr>
-        <tr><td>30</td><td>38</td><td>104</td></tr>
-        <tr><td>32</td><td>40</td><td>105</td></tr>
-        <tr><td>34</td><td>42</td><td>106</td></tr>
-        <tr><td>36</td><td>44</td><td>107</td></tr>
-      </table></div>
-      <p class="note">Crew socks are one size and fit most feet.</p>
+      <div class="tables">
+        <div>
+          <h3>Tees, armless top and jackets</h3>
+          <div class="tbl"><table>
+            <tr><th>Size</th><th>Chest (flat)</th><th>Length</th></tr>
+            <tr><td>S</td><td>56</td><td>68</td></tr>
+            <tr><td>M</td><td>58</td><td>70</td></tr>
+            <tr><td>L</td><td>60</td><td>72</td></tr>
+            <tr><td>XL</td><td>62</td><td>74</td></tr>
+          </table></div>
+        </div>
+        <div>
+          <h3>Baggy jeans</h3>
+          <div class="tbl"><table>
+            <tr><th>Size</th><th>Waist (flat)</th><th>Length</th></tr>
+            <tr><td>30</td><td>38</td><td>104</td></tr>
+            <tr><td>32</td><td>40</td><td>105</td></tr>
+            <tr><td>34</td><td>42</td><td>106</td></tr>
+            <tr><td>36</td><td>44</td><td>107</td></tr>
+          </table></div>
+        </div>
+      </div>
+      <p class="note small">Crew socks are one size and fit most feet.</p>
     </div>
   </section>
 
   <section class="faq" id="faq">
-    <div class="wrap sizes-wrap">
-      <h2>Questions</h2>
+    <div class="wrap">
+      <div class="kicker"><span>05</span><span>FAQ</span></div>
+      <h2 class="h2-xl" style="margin-bottom:clamp(32px,5vw,64px)">Questions</h2>
       <!-- EDIT: change these answers to match how you really work -->
-      <details><summary>How do I order?</summary><p>Add pieces to your bag, tap “Order on WhatsApp” and send the message. We confirm your size, colour and delivery with you there.</p></details>
-      <details><summary>How do I pay?</summary><p>Mobile Money or cash on delivery. We’ll share the details on WhatsApp once your order is confirmed.</p></details>
-      <details><summary>Do you deliver?</summary><p>Yes, across Ghana. The delivery fee and time depend on your location and are confirmed on WhatsApp.</p></details>
-      <details><summary>What if my size doesn’t fit?</summary><p>Message us on WhatsApp soon after delivery and we’ll sort out an exchange for unworn pieces.</p></details>
-      <details><summary>Are the drops limited?</summary><p>Yes. Each piece is made in a small run, and when it’s sold out it’s gone until the next drop.</p></details>
+      <div class="faq-list">
+        <details><summary>How do I order?</summary><p>Add pieces to your bag, tap “Order on WhatsApp” and send the message. We confirm your size, colour and delivery with you there.</p></details>
+        <details><summary>How do I pay?</summary><p>Mobile Money or cash on delivery. We’ll share the details on WhatsApp once your order is confirmed.</p></details>
+        <details><summary>Do you deliver?</summary><p>Yes, across Ghana. The delivery fee and time depend on your location and are confirmed on WhatsApp.</p></details>
+        <details><summary>What if my size doesn’t fit?</summary><p>Message us on WhatsApp soon after delivery and we’ll sort out an exchange for unworn pieces.</p></details>
+        <details><summary>Are the drops limited?</summary><p>Yes. Each piece is made in a small run, and when it’s sold out it’s gone until the next drop.</p></details>
+      </div>
     </div>
   </section>
 
   <section class="contact" id="contact">
     <div class="wrap">
-      <div>
-        <h2>Get the next drop first</h2>
-        <p>Leave your email and we’ll message you before new pieces go live.</p>
-        <form id="news" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="newsletter">
-          <p hidden><label>Leave this empty: <input name="bot-field"></label></p>
-          <input type="email" name="email" required placeholder="you@email.com" aria-label="Email address">
-          <button type="submit">Join the list</button>
-        </form>
-        <p id="newsMsg" role="status" style="margin-top:10px"></p>
-      </div>
-      <div>
-        <h2>Order &amp; contact</h2>
-        <p>Orders are confirmed on WhatsApp. Pay by Mobile Money on delivery or in advance.</p>
-        <p style="margin-top:10px">WhatsApp: <a href="https://wa.me/233540441560" target="_blank" rel="noopener">+233 54 044 1560</a></p>
-        <p>X: <a href="https://x.com/unknownyouth26" target="_blank" rel="noopener">@unknownyouth26</a></p>
+      <div class="kicker"><span>06</span><span>Contact</span></div>
+      <div class="cols">
+        <div>
+          <h2>Get the next drop first</h2>
+          <p>Leave your email and we’ll message you before new pieces go live.</p>
+          <form id="news" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="newsletter">
+            <p hidden><label>Leave this empty: <input name="bot-field"></label></p>
+            <input type="email" name="email" required placeholder="you@email.com" aria-label="Email address">
+            <button type="submit">Join the list</button>
+          </form>
+          <p id="newsMsg" role="status" style="margin-top:10px"></p>
+        </div>
+        <div>
+          <h2>Order &amp; contact</h2>
+          <p>Orders are confirmed on WhatsApp. Pay by Mobile Money on delivery or in advance.</p>
+          <p style="margin-top:10px">WhatsApp: <a href="https://wa.me/233540441560" target="_blank" rel="noopener">+233 54 044 1560</a></p>
+          <p>X: <a href="https://x.com/unknownyouth26" target="_blank" rel="noopener">@unknownyouth26</a></p>
+        </div>
       </div>
     </div>
   </section>
 </main>
 
-<footer>© <span id="yr"></span> UNLISTED YOUTH STREETWEAR. All rights reserved.</footer>
+<footer>
+  <div class="wrap">
+    <div class="small"><span>© <span id="yr"></span> UNLISTED YOUTH STREETWEAR. All rights reserved.</span><span>Made in Ghana 🇬🇭</span><button class="linkbtn" type="button" data-open-policy>Privacy &amp; cookie policy</button></div>
+  </div>
+  <div class="mega" aria-hidden="true">&nbsp;Unlisted</div>
+</footer>
 
 <a class="float-wa" href="https://wa.me/233540441560?text=Hi%20UNLISTED%20YOUTH%20STREETWEAR%2C%20I%20have%20a%20question." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32" width="30" height="30" fill="currentColor" aria-hidden="true"><path d="M16.04 3C8.84 3 3 8.8 3 15.94c0 2.28.6 4.5 1.74 6.46L3 29l6.8-1.78a13.1 13.1 0 0 0 6.24 1.58C23.2 28.8 29 23 29 15.94 29 8.8 23.2 3 16.04 3zm0 23.6c-1.96 0-3.88-.52-5.56-1.5l-.4-.24-4.04 1.06 1.08-3.94-.26-.4a10.5 10.5 0 0 1-1.62-5.58c0-5.8 4.76-10.52 10.6-10.52S26.6 10.2 26.6 15.94c0 5.8-4.76 10.66-10.56 10.66zm5.8-7.88c-.32-.16-1.88-.92-2.16-1.02-.3-.1-.5-.16-.7.16-.2.32-.8 1.02-1 1.24-.18.2-.36.24-.68.08-.32-.16-1.34-.5-2.54-1.56-.94-.84-1.58-1.88-1.76-2.2-.18-.32-.02-.5.14-.66.14-.14.32-.36.48-.54.16-.18.2-.32.32-.52.1-.2.04-.4-.04-.56-.08-.16-.7-1.7-.98-2.32-.26-.6-.52-.52-.7-.54h-.6c-.2 0-.54.08-.82.4-.28.32-1.08 1.06-1.08 2.58s1.1 3 1.26 3.2c.16.2 2.18 3.3 5.26 4.62.74.32 1.3.5 1.76.64.74.24 1.4.2 1.94.12.6-.1 1.88-.76 2.14-1.5.26-.74.26-1.38.18-1.5-.06-.14-.28-.22-.6-.38z"/></svg></a>
+
+<div class="consent" id="consent" role="region" aria-label="Privacy and cookie policy" aria-live="polite">
+  <div>
+    <h2>Your call.</h2>
+    <p>We can save your bag on this device so it’s waiting when you come back. Reject and nothing is saved. No ads, no tracking. <button class="linkbtn" type="button" data-open-policy>Read the full policy</button></p>
+  </div>
+  <div class="acts">
+    <button class="btn" type="button" data-consent="accepted">Accept</button>
+    <button class="btn ghost" type="button" data-consent="rejected">Reject</button>
+  </div>
+</div>
+
+<dialog class="policy" id="policy" aria-labelledby="policyTitle">
+  <div class="p-head"><h2 id="policyTitle">Privacy &amp; cookie policy</h2><button class="close" type="button" id="policyClose">Close</button></div>
+  <div class="p-body">
+    <p><em>Last updated: 21 November 2026</em></p>
+    <h3>What we collect</h3>
+    <p>Your email address, only if you join the newsletter. It reaches us through our form host (Netlify) and we use it to tell you about new drops. We also get the order details you send us yourself on WhatsApp when you order.</p>
+    <h3>What we save on your device</h3>
+    <p>If you accept, your bag is saved in your browser so it’s still there when you come back. If you reject, your bag only lasts until you close or refresh the page. We don’t use advertising or tracking cookies.</p>
+    <h3>Third parties</h3>
+    <p>Fonts load from Google Fonts, which can see your IP address when the page loads. Orders and chats happen on WhatsApp, which has its own privacy policy.</p>
+    <h3>Your choices</h3>
+    <p>Change your choice any time with the “Privacy &amp; cookie policy” link in the footer. To have your email removed from our list, message us on WhatsApp at +233 54 044 1560. We never sell your data.</p>
+    <p class="status" id="consentStatus" role="status"></p>
+    <div class="acts">
+      <button class="btn" type="button" data-consent="accepted">Accept</button>
+      <button class="btn ghost" type="button" data-consent="rejected">Reject</button>
+    </div>
+  </div>
+</dialog>
 
 <div class="scrim" id="scrim"></div>
 <aside class="drawer" id="drawer" aria-label="Shopping bag" aria-hidden="true">
@@ -377,7 +513,7 @@ try{bag=JSON.parse(localStorage.getItem("uyBag")||"[]")}catch(e){bag=[]}
 const picked={}; // product id -> color index
 const $=id=>document.getElementById(id);
 const money=n=>`${CURRENCY} ${n.toLocaleString()}`;
-const save=()=>{try{localStorage.setItem("uyBag",JSON.stringify(bag))}catch(e){}};
+const save=()=>{if(getConsent()!=="accepted")return; try{localStorage.setItem("uyBag",JSON.stringify(bag))}catch(e){}};
 
 // ===== Shop =====
 function renderFilters(){
@@ -385,7 +521,7 @@ function renderFilters(){
 }
 function renderGrid(){
   const list=PRODUCTS.filter(p=>filter==="all"||p.type===filter);
-  $("grid").innerHTML=list.map(p=>{
+  $("grid").innerHTML=list.map((p,n)=>{
     const ci=picked[p.id]||0, c=p.colors[ci];
     const art=p.photo?`<img src="${PHOTOS[p.photo]}" alt="${p.name} with UNLISTED YOUTH STREETWEAR logo" loading="lazy">`:"";
     const tag=p.limited===0?'<span class="tag out">Sold out</span>':p.limited?`<span class="tag">Limited run of ${p.limited}</span>`:"";
@@ -393,12 +529,12 @@ function renderGrid(){
           ${p.colors.map((k,i)=>`<button class="sw" data-c="${i}" style="background:${k.h}" aria-label="${k.n}" aria-pressed="${i===ci}"></button>`).join("")}
         </div>`:"";
     return `<article class="card" data-id="${p.id}">
-      <div class="art${p.photo?" photo":""}">${art}${tag}</div>
+      <div class="art${p.photo?" photo":""}">${art}${tag}<span class="idx" aria-hidden="true">${String(n+1).padStart(2,"0")}</span></div>
       <div class="info">
         <div class="row"><h3>${p.name}</h3><span class="price">${money(p.price)}</span></div>
         <p>${p.blurb}</p>
         ${sw}
-        <div class="row"><span>${c.n}</span>
+        <div class="row meta"><span>${c.n}</span>
           <select aria-label="Size">${SIZES[p.type].map(s=>`<option>${s}</option>`).join("")}</select>
         </div>
         <button class="add"${p.limited===0?" disabled":""}>${p.limited===0?"Sold out":"Add to bag"}</button>
@@ -538,6 +674,37 @@ document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll("[da
   $("bundleAmt").textContent=money(BUNDLE_SAVING);
   const fi=new Image(); fi.onload=()=>{const c=document.createElement("canvas");c.width=c.height=64;const x=c.getContext("2d");x.fillStyle="#1a1a1a";x.fillRect(0,0,64,64);x.drawImage(fi,4,4,56,56);$("fav").href=c.toDataURL("image/png")}; fi.src=LOGO;
   renderFilters();renderGrid();renderBag();}); // photos load from the script below
+</script>
+
+<script>
+// ===== Privacy & cookie policy: accept / reject =====
+// Accept = the bag is saved in this browser. Reject (or no answer yet) = nothing is saved.
+const CONSENT_KEY="uyConsent";
+function getConsent(){try{return localStorage.getItem(CONSENT_KEY)}catch(e){return null}}
+function setConsent(v){
+  try{localStorage.setItem(CONSENT_KEY,v)}catch(e){}
+  if(v==="accepted")save(); else {try{localStorage.removeItem("uyBag")}catch(e){}}
+  showConsent(false); paintStatus();
+}
+function showConsent(on){
+  $("consent").classList.toggle("show",on);
+  document.body.classList.toggle("consent-open",on);
+}
+function paintStatus(){
+  const c=getConsent();
+  $("consentStatus").textContent="Your choice: "+(c==="accepted"?"Accepted. Your bag is saved on this device.":c==="rejected"?"Rejected. Nothing is saved on this device.":"not chosen yet.");
+}
+document.addEventListener("click",e=>{
+  const c=e.target.closest("[data-consent]");
+  if(c){setConsent(c.dataset.consent); if($("policy").open)$("policy").close(); return;}
+  if(e.target.closest("[data-open-policy]")){paintStatus(); $("policy").showModal();}
+});
+$("policyClose").onclick=()=>$("policy").close();
+$("policy").addEventListener("click",e=>{if(e.target===$("policy"))$("policy").close()});
+document.addEventListener("DOMContentLoaded",()=>{
+  paintStatus();
+  if(!getConsent())setTimeout(()=>showConsent(true),2800); // after the welcome sheet has torn away
+});
 </script>
 
 <script>
